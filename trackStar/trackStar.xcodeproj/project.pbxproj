@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		85D052CA66440505F866EF6E /* Pods_trackStar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B25F6148669444B5B135D04 /* Pods_trackStar.framework */; };
 		CE7286FC2266A23E00AFB273 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7286FB2266A23E00AFB273 /* AppDelegate.swift */; };
 		CE7286FE2266A23E00AFB273 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7286FD2266A23E00AFB273 /* ViewController.swift */; };
 		CE7287012266A23E00AFB273 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE7286FF2266A23E00AFB273 /* Main.storyboard */; };
@@ -16,9 +17,13 @@
 		CE7287112268193500AFB273 /* MapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7287102268193500AFB273 /* MapController.swift */; };
 		CE728713226D2BA800AFB273 /* RidesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE728712226D2BA800AFB273 /* RidesController.swift */; };
 		CE728715226D2BCC00AFB273 /* DetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE728714226D2BCC00AFB273 /* DetailController.swift */; };
+		CE7287192271546E00AFB273 /* GoogleMapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7287182271546E00AFB273 /* GoogleMapController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		02CDE65E2984C4BDE5E188E7 /* Pods-trackStar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-trackStar.release.xcconfig"; path = "Target Support Files/Pods-trackStar/Pods-trackStar.release.xcconfig"; sourceTree = "<group>"; };
+		2B25F6148669444B5B135D04 /* Pods_trackStar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_trackStar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5DFE0080EB2F846C8E725689 /* Pods-trackStar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-trackStar.debug.xcconfig"; path = "Target Support Files/Pods-trackStar/Pods-trackStar.debug.xcconfig"; sourceTree = "<group>"; };
 		CE7286F82266A23E00AFB273 /* trackStar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = trackStar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE7286FB2266A23E00AFB273 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE7286FD2266A23E00AFB273 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -30,6 +35,7 @@
 		CE7287102268193500AFB273 /* MapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapController.swift; sourceTree = "<group>"; };
 		CE728712226D2BA800AFB273 /* RidesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RidesController.swift; sourceTree = "<group>"; };
 		CE728714226D2BCC00AFB273 /* DetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailController.swift; sourceTree = "<group>"; };
+		CE7287182271546E00AFB273 /* GoogleMapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,17 +43,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85D052CA66440505F866EF6E /* Pods_trackStar.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2D777041C577DB5288C8E3E7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2B25F6148669444B5B135D04 /* Pods_trackStar.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3B8FCDCC539375C10F5DB0B0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5DFE0080EB2F846C8E725689 /* Pods-trackStar.debug.xcconfig */,
+				02CDE65E2984C4BDE5E188E7 /* Pods-trackStar.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		CE7286EF2266A23E00AFB273 = {
 			isa = PBXGroup;
 			children = (
 				CE7286FA2266A23E00AFB273 /* trackStar */,
 				CE7286F92266A23E00AFB273 /* Products */,
+				3B8FCDCC539375C10F5DB0B0 /* Pods */,
+				2D777041C577DB5288C8E3E7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +93,7 @@
 				CE728712226D2BA800AFB273 /* RidesController.swift */,
 				CE728714226D2BCC00AFB273 /* DetailController.swift */,
 				CE7287102268193500AFB273 /* MapController.swift */,
+				CE7287182271546E00AFB273 /* GoogleMapController.swift */,
 				CE7286FF2266A23E00AFB273 /* Main.storyboard */,
 				CE7287052266A23E00AFB273 /* Assets.xcassets */,
 				CE7287072266A23E00AFB273 /* LaunchScreen.storyboard */,
@@ -83,9 +110,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE72870D2266A23F00AFB273 /* Build configuration list for PBXNativeTarget "trackStar" */;
 			buildPhases = (
+				BB7C5BA8A1B7BDF49635D7DA /* [CP] Check Pods Manifest.lock */,
 				CE7286F42266A23E00AFB273 /* Sources */,
 				CE7286F52266A23E00AFB273 /* Frameworks */,
 				CE7286F62266A23E00AFB273 /* Resources */,
+				5268348E56416930A736B717 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -143,6 +172,47 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5268348E56416930A736B717 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-trackStar/Pods-trackStar-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-trackStar/Pods-trackStar-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BB7C5BA8A1B7BDF49635D7DA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-trackStar-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CE7286F42266A23E00AFB273 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -151,6 +221,7 @@
 				CE7287112268193500AFB273 /* MapController.swift in Sources */,
 				CE7286FE2266A23E00AFB273 /* ViewController.swift in Sources */,
 				CE7287042266A23E00AFB273 /* trackStar.xcdatamodeld in Sources */,
+				CE7287192271546E00AFB273 /* GoogleMapController.swift in Sources */,
 				CE728713226D2BA800AFB273 /* RidesController.swift in Sources */,
 				CE728715226D2BCC00AFB273 /* DetailController.swift in Sources */,
 				CE7286FC2266A23E00AFB273 /* AppDelegate.swift in Sources */,
@@ -288,6 +359,7 @@
 		};
 		CE72870E2266A23F00AFB273 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5DFE0080EB2F846C8E725689 /* Pods-trackStar.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -303,6 +375,7 @@
 		};
 		CE72870F2266A23F00AFB273 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 02CDE65E2984C4BDE5E188E7 /* Pods-trackStar.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
