@@ -21,7 +21,6 @@ class GoogleMapController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 
     /*
     // MARK: - Navigation
@@ -32,9 +31,10 @@ class GoogleMapController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-        
+    
     // You don't need to modify the default init(nibName:bundle:) method.
-        
+    
+    // Sample Google Maps set up code
     override func loadView() {
         // Create a GMSCameraPosition that tells the map to display the
         // coordinate -33.86,151.20 at zoom level 6.

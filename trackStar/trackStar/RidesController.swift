@@ -11,11 +11,22 @@ import CoreData
 
 class RidesController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var rides: [String] = []
-
+    
+    @IBOutlet weak var tableViewOutlet: UITableView! {
+        didSet {
+            tableViewOutlet.dataSource = self
+            tableViewOutlet.delegate = self
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        let query: NSFetchRequest<Ride> = Ride.fetchRequest()
+        if let results = try? AppDelegate.viewContext.fetch(query) {
+            rides = results.map { $0.name! }
+        }
     }
 
     override func didReceiveMemoryWarning() {
