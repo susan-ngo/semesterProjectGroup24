@@ -24,8 +24,19 @@ class RidesController: UIViewController, UITableViewDelegate, UITableViewDataSou
 
         // Do any additional setup after loading the view.
         let query: NSFetchRequest<Ride> = Ride.fetchRequest()
-        if let results = try? AppDelegate.viewContext.fetch(query) {
-            rides = results.map { $0.name! }
+        let sorter = NSSortDescriptor(key: "name", ascending: true)
+        query.sortDescriptors = [ sorter ]
+        let res = try? AppDelegate.viewContext.fetch(query)
+        
+        let datePrint = DateFormatter()
+        datePrint.dateFormat = "MM-dd-yyyy HH:mm:ss"
+        
+        if let results = res {
+            for ride in results {
+                if let name = ride.name {
+                    rides.append(name)
+                }
+            }
         }
     }
 
@@ -46,6 +57,21 @@ class RidesController: UIViewController, UITableViewDelegate, UITableViewDataSou
         let cell = tableView.dequeueReusableCell(withIdentifier: "standard", for: indexPath)
         cell.textLabel?.text = rides[indexPath.row]
         return cell
+    }
+    
+    // Delete rows
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let config = UISwipeActionsConfiguration(actions: [UIContextualAction(
+            style: .destructive,
+            title: "Delete",
+            handler: { (action, view, completionHandler) in
+                let row = indexPath.row
+                self.rides.remove(at: row)
+                completionHandler(true)
+                tableView.reloadData()
+        })
+            ])
+        return config
     }
 
     /*

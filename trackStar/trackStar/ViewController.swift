@@ -11,9 +11,15 @@ import CoreLocation
 
 class ViewController: UIViewController, CLLocationManagerDelegate {
     
+    let place = CLLocationCoordinate2D(latitude: 38.9779, longitude: -77.0075)
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        if segue.identifier == "MapSegue" {
+            guard let mapController = segue.destination as? MapController else {return}
+            mapController.place = place
+        }
     }
     
     override func viewDidLoad() {

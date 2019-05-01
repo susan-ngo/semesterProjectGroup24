@@ -9,6 +9,12 @@
 	</array>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>In order to track and save a trip</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Need location information in background</string>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>location</string>
+	</array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>

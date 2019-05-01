@@ -18,6 +18,7 @@
 		CE728713226D2BA800AFB273 /* RidesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE728712226D2BA800AFB273 /* RidesController.swift */; };
 		CE728715226D2BCC00AFB273 /* DetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE728714226D2BCC00AFB273 /* DetailController.swift */; };
 		CE7287192271546E00AFB273 /* GoogleMapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7287182271546E00AFB273 /* GoogleMapController.swift */; };
+		CE72871D227605D400AFB273 /* libFitSdkCppiOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE72871C227605D400AFB273 /* libFitSdkCppiOS.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,8 @@
 		CE728712226D2BA800AFB273 /* RidesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RidesController.swift; sourceTree = "<group>"; };
 		CE728714226D2BCC00AFB273 /* DetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailController.swift; sourceTree = "<group>"; };
 		CE7287182271546E00AFB273 /* GoogleMapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapController.swift; sourceTree = "<group>"; };
+		CE72871B2276057900AFB273 /* libFitSdkCppiOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libFitSdkCppiOS.a; path = "../../Downloads/FitSDKRelease_20.88.00/cpp/MacStaticLib/build/ReleaseiOS-universal/libFitSdkCppiOS.a"; sourceTree = "<group>"; };
+		CE72871C227605D400AFB273 /* libFitSdkCppiOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFitSdkCppiOS.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE72871D227605D400AFB273 /* libFitSdkCppiOS.a in Frameworks */,
 				85D052CA66440505F866EF6E /* Pods_trackStar.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -53,6 +57,7 @@
 		2D777041C577DB5288C8E3E7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CE72871C227605D400AFB273 /* libFitSdkCppiOS.a */,
 				2B25F6148669444B5B135D04 /* Pods_trackStar.framework */,
 			);
 			name = Frameworks;
@@ -70,6 +75,7 @@
 		CE7286EF2266A23E00AFB273 = {
 			isa = PBXGroup;
 			children = (
+				CE72871B2276057900AFB273 /* libFitSdkCppiOS.a */,
 				CE7286FA2266A23E00AFB273 /* trackStar */,
 				CE7286F92266A23E00AFB273 /* Products */,
 				3B8FCDCC539375C10F5DB0B0 /* Pods */,
@@ -364,8 +370,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T9MVF4M7RL;
+				"HEADER_SEARCH_PATHS[arch=*]" = "FitSDKRelease_20.88.00/cpp/MacStaticLib/build/ReleaseiOS-universal/usr/local/include";
 				INFOPLIST_FILE = trackStar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = edu.umd.sngo.trackStar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -380,8 +391,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T9MVF4M7RL;
+				"HEADER_SEARCH_PATHS[arch=*]" = "FitSDKRelease_20.88.00/cpp/MacStaticLib/build/ReleaseiOS-universal/usr/local/include";
 				INFOPLIST_FILE = trackStar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = edu.umd.sngo.trackStar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
