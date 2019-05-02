@@ -80,7 +80,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="WTR-i7-sIm" kind="show" id="L14-NE-2sp"/>
+                                            <segue destination="WTR-i7-sIm" kind="show" identifier="EntireRide" id="L14-NE-2sp"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

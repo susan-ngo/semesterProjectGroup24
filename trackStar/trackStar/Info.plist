@@ -7,14 +7,16 @@
 		<string>googlechromes</string>
 		<string>comgooglemaps</string>
 	</array>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>In order to track and save a trip</string>
-	<key>NSLocationAlwaysUsageDescription</key>
-	<string>Need location information in background</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>location</string>
 	</array>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>In order to track and save a trip</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Need location information in background</string>
+	<key>NSCalendarsUsageDescription</key>
+	<string>Need to access user&apos;s calendar to record date</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>

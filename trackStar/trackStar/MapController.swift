@@ -149,17 +149,22 @@ class MapController: UIViewController, MKMapViewDelegate, CLLocationManagerDeleg
             title: "OK",
             style: .default,
             handler: { (action: UIAlertAction!) in
-                print("yes")
-                if let name = alert.textFields?[0].text {
-                    self.saveRide(name: name)
+                DispatchQueue.main.async {
+                    if let name = alert.textFields?[0].text {
+                        self.saveRide(name: name)
+                        // Added
+                        self.allPoints = []
+                        self.distance = 0.0
+                    }
                 }
         }))
         alert.addAction(UIAlertAction(
             title: "Cancel",
             style: .cancel,
             handler: { (action: UIAlertAction!) in
-                print("no")
-                self.allPoints = []
+                DispatchQueue.main.async {
+                    self.allPoints = []
+                }
         }))
         present(alert, animated: true, completion: nil)
     }
@@ -221,7 +226,7 @@ class MapController: UIViewController, MKMapViewDelegate, CLLocationManagerDeleg
         } catch {
             print("Error saving ride \(name)")
         }
-        allPoints = []
+        //allPoints = []
     }
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
