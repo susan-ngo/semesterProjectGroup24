@@ -28,7 +28,7 @@ class MapController: UIViewController, MKMapViewDelegate, CLLocationManagerDeleg
         if onOffOutlet.isOn {
             startTracking()
         } else {
-            //locationManager.startUpdatingLocation()
+            locationManager.stopUpdatingLocation()
             endRide()
         }
     }
@@ -90,7 +90,7 @@ class MapController: UIViewController, MKMapViewDelegate, CLLocationManagerDeleg
     
     func startTracking() {
         let status = CLLocationManager.authorizationStatus()
-        if (status == .authorizedWhenInUse || status == .authorizedAlways) {
+        if (status == .authorizedWhenInUse || status == .authorizedAlways) && onOffOutlet.isOn {
             locationManager.startUpdatingLocation()
         } else {
             locationManager.requestWhenInUseAuthorization()
@@ -130,8 +130,8 @@ class MapController: UIViewController, MKMapViewDelegate, CLLocationManagerDeleg
             
             var coords = [previousLocation!.coordinate]
             coords += locations.map { $0.coordinate }
-            mapView.add(MKPolyline(coordinates: coords, count: coords.count), level: .aboveLabels)
-            //mapView.add(MKPolyline(coordinates: coords, count: coords.count))
+            mapView.add(MKPolyline(coordinates: coords, count: coords.count))
+            //mapView.add(MKPolyline(coordinates: coords, count: coords.count), level: .aboveLabels)
         }
         allPoints += locations
         
@@ -149,22 +149,22 @@ class MapController: UIViewController, MKMapViewDelegate, CLLocationManagerDeleg
             title: "OK",
             style: .default,
             handler: { (action: UIAlertAction!) in
-                DispatchQueue.main.async {
+                //DispatchQueue.main.async {
                     if let name = alert.textFields?[0].text {
                         self.saveRide(name: name)
                         // Added
                         self.allPoints = []
                         self.distance = 0.0
                     }
-                }
+                //}
         }))
         alert.addAction(UIAlertAction(
             title: "Cancel",
             style: .cancel,
             handler: { (action: UIAlertAction!) in
-                DispatchQueue.main.async {
+                //DispatchQueue.main.async {
                     self.allPoints = []
-                }
+                //}
         }))
         present(alert, animated: true, completion: nil)
     }

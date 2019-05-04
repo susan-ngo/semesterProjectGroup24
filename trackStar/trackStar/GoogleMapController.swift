@@ -8,13 +8,17 @@
 
 import UIKit
 import GoogleMaps
+import GooglePlaces
 
 class GoogleMapController: UIViewController {
+    
+    var placesClient: GMSPlacesClient!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        placesClient = GMSPlacesClient.shared()
     }
 
     override func didReceiveMemoryWarning() {
@@ -39,15 +43,21 @@ class GoogleMapController: UIViewController {
         // Create a GMSCameraPosition that tells the map to display the
         // coordinate -33.86,151.20 at zoom level 6.
         let camera = GMSCameraPosition.camera(withLatitude: -33.86, longitude: 151.20, zoom: 6.0)
-        let mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
+        let mapView = GMSMapView.map(withFrame: CGRect.init(x: 0, y: 0, width: accessibilityFrame.width, height: accessibilityFrame.height - CGFloat(50.0)), camera: camera)
+        //mapView.frame = CGRect.init(x: 0, y: 0, width: self.view.bounds.size.width, height: self.view.bounds.size.height - CGFloat(50.0))
         view = mapView
-            
+
         // Creates a marker in the center of the map.
         let marker = GMSMarker()
         marker.position = CLLocationCoordinate2D(latitude: -33.86, longitude: 151.20)
         marker.title = "Sydney"
         marker.snippet = "Australia"
         marker.map = mapView
+        
+        // Settings
+        mapView.isMyLocationEnabled = true
+        mapView.settings.compassButton = true
+        mapView.settings.myLocationButton = true
     }
 
 }

@@ -66,9 +66,33 @@ class RidesController: UIViewController, UITableViewDelegate, UITableViewDataSou
             title: "Delete",
             handler: { (action, view, completionHandler) in
                 let row = indexPath.row
+                let query: NSFetchRequest<Ride> = Ride.fetchRequest()
+                let res = try? AppDelegate.viewContext.fetch(query)
+                
+                if let results = res {
+                    for ride in results {
+                        if self.rides[row] == ride.name! {
+                            AppDelegate.viewContext.delete(ride)
+                            do {
+                                try AppDelegate.viewContext.save()
+                            } catch {
+                                print("Could not save deletion")
+                            }
+                        }
+                    }
+                }
+//                let managedContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+//                //managedContext.delete(self.rides[row] as! NSManagedObject)
+//
+//                do {
+//                    try managedContext.save()
+//                } catch {
+//                    print("Could not save deletion")
+//                }
                 self.rides.remove(at: row)
                 completionHandler(true)
                 tableView.reloadData()
+                tableView.deleteRows(at: [indexPath], with: .fade)
             })
         ])
         return config
