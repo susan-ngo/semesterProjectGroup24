@@ -19,6 +19,7 @@
 		CE728715226D2BCC00AFB273 /* DetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE728714226D2BCC00AFB273 /* DetailController.swift */; };
 		CE7287192271546E00AFB273 /* GoogleMapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7287182271546E00AFB273 /* GoogleMapController.swift */; };
 		CE72871D227605D400AFB273 /* libFitSdkCppiOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE72871C227605D400AFB273 /* libFitSdkCppiOS.a */; };
+		CE72872F227E052D00AFB273 /* GPXController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE72872E227E052D00AFB273 /* GPXController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,8 @@
 		CE7287182271546E00AFB273 /* GoogleMapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapController.swift; sourceTree = "<group>"; };
 		CE72871B2276057900AFB273 /* libFitSdkCppiOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libFitSdkCppiOS.a; path = "../../Downloads/FitSDKRelease_20.88.00/cpp/MacStaticLib/build/ReleaseiOS-universal/libFitSdkCppiOS.a"; sourceTree = "<group>"; };
 		CE72871C227605D400AFB273 /* libFitSdkCppiOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFitSdkCppiOS.a; sourceTree = "<group>"; };
+		CE72872E227E052D00AFB273 /* GPXController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPXController.swift; sourceTree = "<group>"; };
+		CE728730227E287900AFB273 /* Sample Ride.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Sample Ride.gpx"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +103,8 @@
 				CE728714226D2BCC00AFB273 /* DetailController.swift */,
 				CE7287102268193500AFB273 /* MapController.swift */,
 				CE7287182271546E00AFB273 /* GoogleMapController.swift */,
+				CE72872E227E052D00AFB273 /* GPXController.swift */,
+				CE728730227E287900AFB273 /* Sample Ride.gpx */,
 				CE7286FF2266A23E00AFB273 /* Main.storyboard */,
 				CE7287052266A23E00AFB273 /* Assets.xcassets */,
 				CE7287072266A23E00AFB273 /* LaunchScreen.storyboard */,
@@ -225,6 +230,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE7287112268193500AFB273 /* MapController.swift in Sources */,
+				CE72872F227E052D00AFB273 /* GPXController.swift in Sources */,
 				CE7286FE2266A23E00AFB273 /* ViewController.swift in Sources */,
 				CE7287042266A23E00AFB273 /* trackStar.xcdatamodeld in Sources */,
 				CE7287192271546E00AFB273 /* GoogleMapController.swift in Sources */,

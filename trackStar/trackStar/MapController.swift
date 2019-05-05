@@ -123,10 +123,10 @@ class MapController: UIViewController, MKMapViewDelegate, CLLocationManagerDeleg
             let duration = latest.timestamp.timeIntervalSince(previousLocation!.timestamp)
             let speed = distanceInMiles * (3600.0 / duration)
             
+            speedLabel.text = String(format: "%.1f mph", speed)
+            
             distance += distanceInMiles
             distanceLabel.text = String(format: "%.2f miles", distance)
-            
-            speedLabel.text = String(format: "%.1f mph", speed)
             
             var coords = [previousLocation!.coordinate]
             coords += locations.map { $0.coordinate }
@@ -184,6 +184,7 @@ class MapController: UIViewController, MKMapViewDelegate, CLLocationManagerDeleg
         }
     }
     
+    var index = 0
     func saveRide(name: String) {
         id = nextID()
         
@@ -203,12 +204,34 @@ class MapController: UIViewController, MKMapViewDelegate, CLLocationManagerDeleg
             obj.ride = ride
         }
         
+        // Save as .gpx file
+        index = index + 1
+        let name = "Ride\(index)"
+        let fileName = "\(ride.name ?? name).gpx"
+        let path = NSURL(fileURLWithPath: "file:///Users/user/semesterProjectGroup24/trackStar/trackStar").appendingPathComponent(fileName)
+        var gpxText : String = String("<?xml version=\"1.0\" encoding=\"UTF-8\"?><gpx version=\"1.1\" creator=\"trackStar\" xmlns=\"http://www.topografix.com/GPX/1/1\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:gte=\"http://www.gpstrackeditor.com/xmlschemas/General/1\" xsi:schemaLocation=\"http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd\">")
+        gpxText.append("<trk><trkseg><name>\(String(describing: ride.name))</name>")
+        for locations in self.allPoints {
+            let newLine : String = String("<trkpt lat=\"\(String(format:"%.6f", locations.coordinate.latitude))\" lon=\"\(String(format:"%.6f", locations.coordinate.longitude))\"><ele>\(locations.altitude)</ele><time>\(String(describing: locations.timestamp))</time></trkpt>")
+            gpxText.append(contentsOf: newLine)
+        }
+        gpxText.append("</trkseg></trk></gpx>")
+        do {
+            try gpxText.write(to: path!, atomically: true, encoding: String.Encoding.utf8)
+            let vc = UIActivityViewController(activityItems: [path!], applicationActivities: [])
+            self.present(vc, animated: true, completion: nil)
+        } catch {
+            print("Failed to create file")
+            print("\(error)")
+        }
+        
         do {
             try AppDelegate.viewContext.save()
         } catch {
             print("loc save odd")
         }
         
+        // Debugging
         let fetchRides: NSFetchRequest<Ride> = Ride.fetchRequest()
         let resR = try? AppDelegate.viewContext.fetch(fetchRides)
         if let rides = resR {

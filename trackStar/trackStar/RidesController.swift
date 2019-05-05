@@ -59,7 +59,7 @@ class RidesController: UIViewController, UITableViewDelegate, UITableViewDataSou
         return cell
     }
     
-    // Delete rows
+    // Delete rows on controller & core data
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let config = UISwipeActionsConfiguration(actions: [UIContextualAction(
             style: .destructive,

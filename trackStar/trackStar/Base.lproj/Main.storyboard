@@ -96,10 +96,19 @@
                         <viewLayoutGuide key="safeArea" id="4Wt-ww-0zW"/>
                     </view>
                     <connections>
+                        <outlet property="searchDisplayController" destination="YaJ-wt-JR5" id="6hR-cq-NHf"/>
                         <outlet property="tableViewOutlet" destination="GM5-t3-Dap" id="4Nk-26-uKn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="67S-Xz-dn0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="YaJ-wt-JR5">
+                    <connections>
+                        <outlet property="delegate" destination="8Uv-KG-NkC" id="sj5-Hh-7u8"/>
+                        <outlet property="searchContentsController" destination="8Uv-KG-NkC" id="Rq2-nE-Dzy"/>
+                        <outlet property="searchResultsDataSource" destination="8Uv-KG-NkC" id="RYe-2V-7ck"/>
+                        <outlet property="searchResultsDelegate" destination="8Uv-KG-NkC" id="BPr-uf-zpC"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="1009" y="832"/>
         </scene>
@@ -206,7 +215,48 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8l2-Cd-d0v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2391.1999999999998" y="133.5832083958021"/>
+            <point key="canvasLocation" x="2380" y="134"/>
+        </scene>
+        <!--Controller-->
+        <scene sceneID="tSB-74-XBl">
+            <objects>
+                <viewController id="vTx-Yi-bma" customClass="GPXController" customModule="trackStar" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="E0p-4d-2jq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mqF-wv-zFz">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="standard" textLabel="ohk-Ag-Z2c" style="IBUITableViewCellStyleDefault" id="qNE-F2-SZS">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qNE-F2-SZS" id="Zyv-gR-Aal">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ohk-Ag-Z2c">
+                                                    <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="rdX-Hp-f9x"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cx3-SB-D1D" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3064.8000000000002" y="133.5832083958021"/>
         </scene>
         <!--Google Map Controller-->
         <scene sceneID="xDP-IB-vgq">
