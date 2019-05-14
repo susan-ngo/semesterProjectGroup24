@@ -1,12 +1,13 @@
 # Uncomment the next line to define a global platform for your project
 # platform :ios, ’12.0’
 
-target 'trackStar' do
-  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
-  use_frameworks!
 
-  # Pods for trackStar
-  source 'https://github.com/CocoaPods/Specs.git'
-  pod 'GoogleMaps'
-  pod 'GooglePlaces'
+source 'https://github.com/CocoaPods/Specs.git'
+target 'trackStar' do
+  platform :ios, '9.0'
+#  pod 'GooglePlacePicker', '= 2.7.0'
+  pod 'GooglePlaces', '= 3.1.0'
+  pod 'GoogleMaps', '= 3.1.0'
+  pod 'Alamofire'
+  pod 'SwiftyJSON', '~> 4.0'
 end

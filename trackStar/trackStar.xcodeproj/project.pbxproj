@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		85D052CA66440505F866EF6E /* Pods_trackStar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B25F6148669444B5B135D04 /* Pods_trackStar.framework */; };
+		8CFE10FCF33F830AD97727B3 /* libPods-trackStar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E2E0D92414141AD0464C83D8 /* libPods-trackStar.a */; };
+		9FA9166D22849FB800F64415 /* PlanRide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA9166C22849FB800F64415 /* PlanRide.swift */; };
 		CE7286FC2266A23E00AFB273 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7286FB2266A23E00AFB273 /* AppDelegate.swift */; };
 		CE7286FE2266A23E00AFB273 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7286FD2266A23E00AFB273 /* ViewController.swift */; };
 		CE7287012266A23E00AFB273 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE7286FF2266A23E00AFB273 /* Main.storyboard */; };
@@ -24,8 +25,8 @@
 
 /* Begin PBXFileReference section */
 		02CDE65E2984C4BDE5E188E7 /* Pods-trackStar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-trackStar.release.xcconfig"; path = "Target Support Files/Pods-trackStar/Pods-trackStar.release.xcconfig"; sourceTree = "<group>"; };
-		2B25F6148669444B5B135D04 /* Pods_trackStar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_trackStar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DFE0080EB2F846C8E725689 /* Pods-trackStar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-trackStar.debug.xcconfig"; path = "Target Support Files/Pods-trackStar/Pods-trackStar.debug.xcconfig"; sourceTree = "<group>"; };
+		9FA9166C22849FB800F64415 /* PlanRide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanRide.swift; sourceTree = "<group>"; };
 		CE7286F82266A23E00AFB273 /* trackStar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = trackStar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE7286FB2266A23E00AFB273 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE7286FD2266A23E00AFB273 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -42,6 +43,7 @@
 		CE72871C227605D400AFB273 /* libFitSdkCppiOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFitSdkCppiOS.a; sourceTree = "<group>"; };
 		CE72872E227E052D00AFB273 /* GPXController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPXController.swift; sourceTree = "<group>"; };
 		CE728730227E287900AFB273 /* Sample Ride.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Sample Ride.gpx"; sourceTree = "<group>"; };
+		E2E0D92414141AD0464C83D8 /* libPods-trackStar.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-trackStar.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,7 +52,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE72871D227605D400AFB273 /* libFitSdkCppiOS.a in Frameworks */,
-				85D052CA66440505F866EF6E /* Pods_trackStar.framework in Frameworks */,
+				8CFE10FCF33F830AD97727B3 /* libPods-trackStar.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,7 +63,7 @@
 			isa = PBXGroup;
 			children = (
 				CE72871C227605D400AFB273 /* libFitSdkCppiOS.a */,
-				2B25F6148669444B5B135D04 /* Pods_trackStar.framework */,
+				E2E0D92414141AD0464C83D8 /* libPods-trackStar.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -110,6 +112,7 @@
 				CE7287072266A23E00AFB273 /* LaunchScreen.storyboard */,
 				CE72870A2266A23E00AFB273 /* Info.plist */,
 				CE7287022266A23E00AFB273 /* trackStar.xcdatamodeld */,
+				9FA9166C22849FB800F64415 /* PlanRide.swift */,
 			);
 			path = trackStar;
 			sourceTree = "<group>";
@@ -233,6 +236,7 @@
 				CE72872F227E052D00AFB273 /* GPXController.swift in Sources */,
 				CE7286FE2266A23E00AFB273 /* ViewController.swift in Sources */,
 				CE7287042266A23E00AFB273 /* trackStar.xcdatamodeld in Sources */,
+				9FA9166D22849FB800F64415 /* PlanRide.swift in Sources */,
 				CE7287192271546E00AFB273 /* GoogleMapController.swift in Sources */,
 				CE728713226D2BA800AFB273 /* RidesController.swift in Sources */,
 				CE728715226D2BCC00AFB273 /* DetailController.swift in Sources */,

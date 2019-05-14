@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Wa1-jx-NHj">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Wa1-jx-NHj">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -33,12 +34,13 @@
                                     <segue destination="8Uv-KG-NkC" kind="show" id="kwG-bg-orG"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P5h-eS-Ej4">
-                                <rect key="frame" x="121" y="280" width="133" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="psi-Eh-Uyz">
+                                <rect key="frame" x="139" y="384" width="97" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Show Google Maps"/>
+                                <state key="normal" title="Plan Bike Ride"/>
                                 <connections>
-                                    <segue destination="rop-hM-Zlg" kind="show" id="Mc8-vh-XNu"/>
+                                    <action selector="OpenView:" destination="qtE-pK-f4G" eventType="touchUpInside" id="6mz-BE-tAu"/>
+                                    <segue destination="VMX-Np-7Tj" kind="show" id="2cQ-pD-Dgn"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -48,8 +50,9 @@
                     <navigationItem key="navigationItem" id="egC-RO-PP6"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="qtE-pK-f4G" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1009" y="134"/>
+            <point key="canvasLocation" x="1008.8" y="133.5832083958021"/>
         </scene>
         <!--Rides Controller-->
         <scene sceneID="axA-Dn-kbC">
@@ -143,6 +146,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IOT-6f-NyB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1684" y="831.63418290854577"/>
+        </scene>
+        <!--PickA Place View Controller-->
+        <scene sceneID="vGJ-HX-cJG">
+            <objects>
+                <viewController id="VMX-Np-7Tj" customClass="PickAPlaceViewController" customModule="trackStar" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rdo-Bz-s3e">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="lWH-Rh-LiB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9PX-4e-Z1h" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2412" y="845.1274362818591"/>
         </scene>
         <!--Map Controller-->
         <scene sceneID="Klb-Wg-9aN">

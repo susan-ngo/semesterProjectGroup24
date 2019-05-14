@@ -1,4 +1,4 @@
-framework module Pods_trackStar {
+module Pods_trackStar {
   umbrella header "Pods-trackStar-umbrella.h"
 
   export *
