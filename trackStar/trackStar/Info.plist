@@ -15,8 +15,12 @@
 	<string>In order to track and save a trip</string>
 	<key>NSLocationAlwaysUsageDescription</key>
 	<string>Need location information in background</string>
+	<key>kTCCServiceMediaLibrary</key>
+	<string>Play music</string>
 	<key>NSCalendarsUsageDescription</key>
 	<string>Need to access user&apos;s calendar to record date</string>
+	<key>NSAppleMusicUsageDescription</key>
+	<string>Play music</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>

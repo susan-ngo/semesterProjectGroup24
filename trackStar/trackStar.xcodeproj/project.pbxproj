@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		8CFE10FCF33F830AD97727B3 /* libPods-trackStar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E2E0D92414141AD0464C83D8 /* libPods-trackStar.a */; };
 		9FA9166D22849FB800F64415 /* PlanRide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA9166C22849FB800F64415 /* PlanRide.swift */; };
+		A3A982F2228B7F54000990AC /* Loud Pipes.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3A982F1228B7F54000990AC /* Loud Pipes.mp3 */; };
+		A3A982F4228B8815000990AC /* Ratatat - Montanita.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3A982F3228B8815000990AC /* Ratatat - Montanita.mp3 */; };
+		A3A982F6228B881E000990AC /* Ratatat - Gettysburg.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3A982F5228B881E000990AC /* Ratatat - Gettysburg.mp3 */; };
+		A3A982F8228B9526000990AC /* appBiking.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A3A982F7228B9526000990AC /* appBiking.jpg */; };
+		A3A982FA228B976F000990AC /* crop_ALL_ROUTES_MAP_SIMPLE.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A3A982F9228B976F000990AC /* crop_ALL_ROUTES_MAP_SIMPLE.jpg */; };
 		CE7286FC2266A23E00AFB273 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7286FB2266A23E00AFB273 /* AppDelegate.swift */; };
 		CE7286FE2266A23E00AFB273 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7286FD2266A23E00AFB273 /* ViewController.swift */; };
 		CE7287012266A23E00AFB273 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE7286FF2266A23E00AFB273 /* Main.storyboard */; };
@@ -27,6 +32,11 @@
 		02CDE65E2984C4BDE5E188E7 /* Pods-trackStar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-trackStar.release.xcconfig"; path = "Target Support Files/Pods-trackStar/Pods-trackStar.release.xcconfig"; sourceTree = "<group>"; };
 		5DFE0080EB2F846C8E725689 /* Pods-trackStar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-trackStar.debug.xcconfig"; path = "Target Support Files/Pods-trackStar/Pods-trackStar.debug.xcconfig"; sourceTree = "<group>"; };
 		9FA9166C22849FB800F64415 /* PlanRide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanRide.swift; sourceTree = "<group>"; };
+		A3A982F1228B7F54000990AC /* Loud Pipes.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Loud Pipes.mp3"; path = "../../../Downloads/Loud Pipes.mp3"; sourceTree = "<group>"; };
+		A3A982F3228B8815000990AC /* Ratatat - Montanita.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Ratatat - Montanita.mp3"; path = "../../../Downloads/Ratatat - Montanita.mp3"; sourceTree = "<group>"; };
+		A3A982F5228B881E000990AC /* Ratatat - Gettysburg.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Ratatat - Gettysburg.mp3"; path = "../../../Downloads/Ratatat - Gettysburg.mp3"; sourceTree = "<group>"; };
+		A3A982F7228B9526000990AC /* appBiking.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = appBiking.jpg; path = ../../../Desktop/appBiking.jpg; sourceTree = "<group>"; };
+		A3A982F9228B976F000990AC /* crop_ALL_ROUTES_MAP_SIMPLE.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = crop_ALL_ROUTES_MAP_SIMPLE.jpg; path = ../../../Downloads/crop_ALL_ROUTES_MAP_SIMPLE.jpg; sourceTree = "<group>"; };
 		CE7286F82266A23E00AFB273 /* trackStar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = trackStar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE7286FB2266A23E00AFB273 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE7286FD2266A23E00AFB273 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -106,12 +116,17 @@
 				CE7287102268193500AFB273 /* MapController.swift */,
 				CE7287182271546E00AFB273 /* GoogleMapController.swift */,
 				CE72872E227E052D00AFB273 /* GPXController.swift */,
+				A3A982F9228B976F000990AC /* crop_ALL_ROUTES_MAP_SIMPLE.jpg */,
 				CE728730227E287900AFB273 /* Sample Ride.gpx */,
+				A3A982F7228B9526000990AC /* appBiking.jpg */,
 				CE7286FF2266A23E00AFB273 /* Main.storyboard */,
 				CE7287052266A23E00AFB273 /* Assets.xcassets */,
 				CE7287072266A23E00AFB273 /* LaunchScreen.storyboard */,
 				CE72870A2266A23E00AFB273 /* Info.plist */,
 				CE7287022266A23E00AFB273 /* trackStar.xcdatamodeld */,
+				A3A982F3228B8815000990AC /* Ratatat - Montanita.mp3 */,
+				A3A982F1228B7F54000990AC /* Loud Pipes.mp3 */,
+				A3A982F5228B881E000990AC /* Ratatat - Gettysburg.mp3 */,
 				9FA9166C22849FB800F64415 /* PlanRide.swift */,
 			);
 			path = trackStar;
@@ -146,7 +161,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0900;
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Group 24";
 				TargetAttributes = {
 					CE7286F72266A23E00AFB273 = {
@@ -178,8 +193,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3A982FA228B976F000990AC /* crop_ALL_ROUTES_MAP_SIMPLE.jpg in Resources */,
 				CE7287092266A23E00AFB273 /* LaunchScreen.storyboard in Resources */,
+				A3A982F2228B7F54000990AC /* Loud Pipes.mp3 in Resources */,
+				A3A982F6228B881E000990AC /* Ratatat - Gettysburg.mp3 in Resources */,
+				A3A982F4228B8815000990AC /* Ratatat - Montanita.mp3 in Resources */,
 				CE7287062266A23E00AFB273 /* Assets.xcassets in Resources */,
+				A3A982F8228B9526000990AC /* appBiking.jpg in Resources */,
 				CE7287012266A23E00AFB273 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -280,6 +300,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -287,6 +308,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -320,6 +342,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -337,6 +360,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -344,6 +368,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -369,6 +394,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.2;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -379,7 +405,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = T9MVF4M7RL;
+				DEVELOPMENT_TEAM = 6K54LR98ST;
 				"HEADER_SEARCH_PATHS[arch=*]" = "FitSDKRelease_20.88.00/cpp/MacStaticLib/build/ReleaseiOS-universal/usr/local/include";
 				INFOPLIST_FILE = trackStar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -400,7 +426,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = T9MVF4M7RL;
+				DEVELOPMENT_TEAM = 6K54LR98ST;
 				"HEADER_SEARCH_PATHS[arch=*]" = "FitSDKRelease_20.88.00/cpp/MacStaticLib/build/ReleaseiOS-universal/usr/local/include";
 				INFOPLIST_FILE = trackStar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
