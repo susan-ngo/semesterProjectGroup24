@@ -286,7 +286,8 @@ class MapController: UIViewController, MKMapViewDelegate, CLLocationManagerDeleg
         index = index + 1
         let name = "Ride\(index)"
         let fileName = "\(ride.name ?? name).gpx"
-        let path = NSURL(fileURLWithPath: "file:///Users/user/semesterProjectGroup24/trackStar/trackStar").appendingPathComponent(fileName)
+        let documents = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as! String
+        let writePath = NSURL(fileURLWithPath: documents).appendingPathComponent(fileName)
         var gpxText : String = String("<?xml version=\"1.0\" encoding=\"UTF-8\"?><gpx version=\"1.1\" creator=\"trackStar\" xmlns=\"http://www.topografix.com/GPX/1/1\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:gte=\"http://www.gpstrackeditor.com/xmlschemas/General/1\" xsi:schemaLocation=\"http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd\">")
         gpxText.append("<trk><trkseg><name>\(String(describing: ride.name))</name>")
         for locations in self.allPoints {
@@ -295,8 +296,8 @@ class MapController: UIViewController, MKMapViewDelegate, CLLocationManagerDeleg
         }
         gpxText.append("</trkseg></trk></gpx>")
         do {
-            try gpxText.write(to: path!, atomically: true, encoding: String.Encoding.utf8)
-            let vc = UIActivityViewController(activityItems: [path!], applicationActivities: [])
+            try gpxText.write(to: writePath!, atomically: true, encoding: String.Encoding.utf8)
+            let vc = UIActivityViewController(activityItems: [writePath!], applicationActivities: [])
             self.present(vc, animated: true, completion: nil)
         } catch {
             print("Failed to create file")
